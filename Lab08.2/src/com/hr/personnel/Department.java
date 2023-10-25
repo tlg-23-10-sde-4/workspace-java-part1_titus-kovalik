@@ -52,6 +52,11 @@ public class Department {
             employees[i].work();
         }
     }
+    public void payEmployees() {
+        for (int i = 0; i < currentIndex; i++) {
+            employees[i].pay();
+        }
+    }
 
     // helper method to add an Employee to the array
     public void addEmployee(Employee emp) {
@@ -75,6 +80,7 @@ public class Department {
         this.location = location;
     }
 
+    @Override
     public String toString() {
         return "Department: name=" + getName() + ", location=" + getLocation();
     }

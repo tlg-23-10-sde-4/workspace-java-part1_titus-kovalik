@@ -19,6 +19,11 @@ public class SalariedEmployee extends Employee {
         this(name, hireDate);
         setSalary(salary);
     }
+    //methods
+    @Override
+    public void pay() {
+        System.out.printf("%s is paid salary %s \n", getName(), getSalary());
+    }
 
     public double getSalary() {
         return salary;
@@ -30,6 +35,6 @@ public class SalariedEmployee extends Employee {
 
     @Override
     public String toString() {
-        return "SalariedEmployee: name=" + getName() + ", hire date=" + getHireDate() + ", salary=" + getSalary();
+        return super.toString() + ", salary=" + getSalary();
     }
 }
