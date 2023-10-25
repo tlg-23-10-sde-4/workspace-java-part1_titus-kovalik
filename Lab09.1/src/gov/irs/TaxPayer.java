@@ -17,6 +17,7 @@ package gov.irs;
  *   If the IRS were to change tax rates, we would only need to change that here.
  */
 public interface TaxPayer {
+    public static final double DEFAULT_STANDARD_DEDUCTION = 7500.0;
     public static final double HOURLY_TAX_RATE = 0.25;
     public static final double SALARIED_TAX_RATE = 0.30;
 
@@ -25,4 +26,8 @@ public interface TaxPayer {
     default public void fileReturn() {
         System.out.println("Return filed by U.S. Mail");
     }
+    default public double getStandardDeduction() {
+        return DEFAULT_STANDARD_DEDUCTION;
+    }
+
 }
