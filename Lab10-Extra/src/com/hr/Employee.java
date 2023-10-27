@@ -55,7 +55,7 @@ public class Employee {
 //        }
 //    }
     // OPTION 4: try-catch the exception, then throw a different one.
-    //instead of re-throwing this low-level transportatio-oriented exception,
+    //instead of re-throwing this low-level transportation-oriented exception,
     //we'll throw an HR oriented exception instead
     public void goToWork() throws WorkException {
         Car jeep = new Car("ABC123", "Jeep", "Gladiator");

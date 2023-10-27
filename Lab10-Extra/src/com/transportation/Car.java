@@ -24,7 +24,7 @@ public class Car extends Vehicle {
     public void stop() {
         System.out.println("Car stopped");
     }
-
+    @Override
     public void moveTo(String location) throws DestinationUnreachableException {
         if (location.equals("west seattle")) {
             throw new DestinationUnreachableException("Unable to get to " + location + ", Bridge is destroyed");
