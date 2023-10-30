@@ -6,7 +6,7 @@ import com.jeep.Trim;
 
 class JeepValidationTest {
     public static void main(String[] args) {
-        Jeep jeep = new Jeep(Model.WRANGLER, Trim.WILLYS, true, true, 12);
+        Jeep jeep = new Jeep(Model.WRANGLER, Trim.WILLYS, true, true, 11);
         jeep = new Jeep(Model.WRANGLER, Trim.WILLYS, true, true, 20);
         jeep = new Jeep(Model.WRANGLER, Trim.WILLYS, true, true, 9);
         jeep = new Jeep(Model.WRANGLER, Trim.WILLYS, true, true, 21);
