@@ -148,7 +148,18 @@ public final class InMemoryCatalog implements Catalog {
      * Another yes/no answer.
      */
     public boolean hasGenre(MusicCategory category) {
-        return findByCategory(category).size() > 0;
+//        return findByCategory(category).size() > 0;
+
+        boolean result = false;
+
+        for (MusicItem item : catalogData) {
+            if (item.getMusicCategory().equals(category)) {
+                result = true;
+                break;
+            }
+        }
+
+        return result;
     }
 
 
@@ -156,9 +167,6 @@ public final class InMemoryCatalog implements Catalog {
      * TASK: find the titles of all "pop" items, sorted by natural order.
      * Just the titles!
      */
-//    public Collection<MusicItem> popTitles(MusicCategory genre) {
-//        return MusicItem;
-//    }
 
 
 
