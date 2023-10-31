@@ -9,6 +9,8 @@
 package com.poetry.io;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class PoemClient {
 
@@ -33,16 +35,24 @@ public class PoemClient {
      * The try-with-resources below allows you to initialize the stream and auto-close it.
      */
     private static void readPoem() {
-        // TODO: initialize 'reader' variable and complete the try block
-        try (BufferedReader reader = new BufferedReader(new FileReader("hiaku.txt"))) {
-            String line;
-            while ( (line = reader.readLine()) != null ) {
-                System.out.println(line);
-            }
-            }
-        catch (IOException e) {
+        try {
+            String poem = Files.readString(Path.of("hiaku.txt"));
+            System.out.println(poem);
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+        // TODO: initialize 'reader' variable and complete the try block
+//        try (BufferedReader reader = new BufferedReader(new FileReader("hiaku.txt"))) {
+//            String line;
+//            while ( (line = reader.readLine()) != null ) {
+//                System.out.println(line);
+//            }
+//        }
+//        catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
     private static void writePoem() {
         try (PrintWriter writer = new PrintWriter(new FileWriter("hiaku.txt"))) {
