@@ -44,7 +44,7 @@ public class PoemClient {
             e.printStackTrace();
         }
     }
-    private static void writerPoem() {
+    private static void writePoem() {
         try (PrintWriter writer = new PrintWriter(new FileWriter("hiaku.txt"))) {
             writer.println("I broke my code again");
             writer.println("I can't getVariable");
@@ -67,7 +67,7 @@ public class PoemClient {
      * Use a PrintWriter wrapped around a FileWriter.
      * Use a try-with-resources to initialize the stream and auto-close it.
      */
-    private static void writePoem() {
-        // TODO
-    }
+//    private static void writePoem() {
+//        // TODO
+//    }
 }
