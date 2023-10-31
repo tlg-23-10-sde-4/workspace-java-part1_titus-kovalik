@@ -1,0 +1,3 @@
+I broke my code again
+I can't getVariable
+I'll direct assign

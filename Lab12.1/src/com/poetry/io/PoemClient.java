@@ -16,8 +16,8 @@ public class PoemClient {
      * To run one method at a time, uncomment the call to the one you want to execute.
      */
     public static void main(String[] args) {
-         //readPoem();
-         writePoem();
+         readPoem();
+         //writePoem();
     }
 
     /**
@@ -67,7 +67,5 @@ public class PoemClient {
      * Use a PrintWriter wrapped around a FileWriter.
      * Use a try-with-resources to initialize the stream and auto-close it.
      */
-//    private static void writePoem() {
-//        // TODO
-//    }
+
 }

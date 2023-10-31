@@ -28,14 +28,20 @@ class InMemoryCatalogTest {
         // testFindByKeyword();
          //testFindByCategory();
          //testSize();
-        // testGetAll();
+         //testGetAll();
 
         //Task method tests
         //testFindSelfTitled();
         //testFindCheapRock();
         //testGenreFinder();
         //testFindAverage();
-        testHasGenre();
+        //testHasGenre();
+        testGenreAvrg(MusicCategory.POP);
+    }
+
+    private static void testGenreAvrg(MusicCategory Pop) {
+        InMemoryCatalog catalog = new InMemoryCatalog();
+        System.out.println("The average price in this genre is: " + MusicCategory.POP);
     }
 
     private static void testHasGenre() {
@@ -93,6 +99,10 @@ class InMemoryCatalogTest {
     }
 
     private static void testGetAll() {
+        InMemoryCatalog catalog = new InMemoryCatalog();
+
+        Collection<MusicItem> allItems = catalog.getAll();
+
     }
 
     // helper method to show collection vertically

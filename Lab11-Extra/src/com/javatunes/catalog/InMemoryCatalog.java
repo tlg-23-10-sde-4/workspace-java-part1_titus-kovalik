@@ -8,9 +8,7 @@
 
 package com.javatunes.catalog;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 // OF COURSE THIS CLASS DOESN'T COMPILE
 // Your first job is to fulfill the contract that this class has signed.
@@ -135,6 +133,19 @@ public final class InMemoryCatalog implements Catalog {
     /**
      * TASK: find the average price of items in the specified genre (MusicCategory).
      */
+    public double genreAvrg(MusicCategory category) {
+        double genreAvrg = 0;
+        Collection<MusicItem> result = new ArrayList<>();
+        for (MusicItem item : catalogData) {
+            if (item.getMusicCategory().equals(category)) {
+                result.add(item);
+            }
+        }
+        for (MusicItem item : result) {
+             genreAvrg += item.getPrice();
+        }
+        return genreAvrg/result.size();
+    }
 
 
     /**
@@ -180,6 +191,17 @@ public final class InMemoryCatalog implements Catalog {
      * is a collection of items in that genre.  If there is a genre that we don't currently
      * sell, that key's associated value should be an empty collection, not null.
      */
+
+    public Map<MusicCategory, Collection<MusicItem>> getAllGenreMap() {
+        Map<MusicCategory, Collection<MusicItem>> result = new HashMap<>();
+
+        //TODO: for each category, call another method in this class (hint)
+        //that returns a Collection<MusicItem>
+
+
+
+        return result;
+    }
 
 
 
